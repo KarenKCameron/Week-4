@@ -53,9 +53,15 @@ const cards = [
   { val: 11, displayVal: 'Ace', suit: 'spades' }
 ];
 
+
 /**
  * Logs every property of every card to the console
  *
  * @param {array} deck A deck of cards
  */
-const logCardDeck = deck => {};
+const logCardDeck = deck => {
+  for (let i = 0; i < cards.length; i++) {
+    console.log (`Card Value: ${deck[i].val}, Display Value: ${deck[i].displayVal}, Suit: ${deck[i].suit}`);
+  } 
+};
+logCardDeck(cards)

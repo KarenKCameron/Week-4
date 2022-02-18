@@ -1,4 +1,4 @@
-const cards = [
+    const cards = [
   { val: 2, displayVal: "2", suit: "hearts" },
   { val: 3, displayVal: "3", suit: "hearts" },
   { val: 4, displayVal: "4", suit: "hearts" },
@@ -21,7 +21,16 @@ const cards = [
  * @param {array} cards
  * @return {string} displayVal
  */
-const cardsWorthTen = cards => {};
+let newArr = []
+const cardsWorthTen = cards => {
+   cards.map(function tenCards(cards){
+     if(cards.val === 10){
+      newArr.push(cards.displayVal)
+     }
+   })
+    return newArr
+   }
+  
 
 console.log(cardsWorthTen(cards));
 // should return/log "10, Jack, Queen, King"
